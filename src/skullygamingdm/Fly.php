@@ -1,26 +1,9 @@
 
 <?php
-/**
- *  ____  _            _______ _          _____
- * |  _ \| |          |__   __| |        |  __ \
- * | |_) | | __ _ _______| |  | |__   ___| |  | | _____   __
- * |  _ <| |/ _` |_  / _ \ |  | '_ \ / _ \ |  | |/ _ \ \ / /
- * | |_) | | (_| |/ /  __/ |  | | | |  __/ |__| |  __/\ V /
- * |____/|_|\__,_/___\___|_|  |_| |_|\___|_____/ \___| \_/
- *
- * Copyright (C) 2018 iiFlamiinBlaze
- *
- * iiFlamiinBlaze's plugins are licensed under MIT license!
- * Made by iiFlamiinBlaze for the PocketMine-MP Community!
- *
- * @author iiFlamiinBlaze
- * Twitter: https://twitter.com/iiFlamiinBlaze
- * GitHub: https://github.com/iiFlamiinBlaze
- * Discord: https://discord.gg/znEsFsG
- */
+
 declare(strict_types=1);
 
-namespace iiFlamiinBlaze\BlazinFly;
+namespace SkullyGamingDM\Fly;
 
 use pocketmine\entity\Entity;
 use pocketmine\event\entity\EntityLevelChangeEvent;
@@ -34,9 +17,9 @@ use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\utils\TextFormat;
 
-class BlazinFly extends PluginBase implements Listener{
+class Fly extends PluginBase implements Listener{
 
-	const PREFIX = TextFormat::AQUA . "BlazinFly" . TextFormat::GOLD . " > ";
+	const PREFIX = TextFormat::AQUA . "Fly" . TextFormat::GOLD . " > ";
 	const VERSION = "v1.8.7";
 
 	public function onEnable() : void{
@@ -80,7 +63,7 @@ class BlazinFly extends PluginBase implements Listener{
 				$sender->sendMessage(self::PREFIX . TextFormat::RED . "Use this command in-game");
 				return false;
 			}
-			if(!$sender->hasPermission("blazinfly.command")){
+			if(!$sender->hasPermission("fly.command")){
 				$sender->sendMessage(self::PREFIX . TextFormat::RED . "You do not have permission to use this command");
 				return false;
 			}
@@ -96,7 +79,7 @@ class BlazinFly extends PluginBase implements Listener{
 				}
 				return false;
 			}
-			if(!$sender->hasPermission("blazinfly.other")){
+			if(!$sender->hasPermission("fly.other")){
 				$sender->sendMessage(self::PREFIX . TextFormat::RED . "You do not have permission to enable flight for others");
 				return false;
 			}
