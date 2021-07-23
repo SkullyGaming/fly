@@ -1,0 +1,16 @@
+name: Fly
+main: SkullyGamingDM\Fly\Fly
+description: A survival fly plugin!
+version: 1.8.7
+api: 3.0.0
+author: SkullyGamingDM
+commands:
+  fly:
+    description: "Command that allows you to fly when you are in Survival Mode!"
+permissions:
+  fly.command:
+    description: "Fly command permission"
+    default: op
+  fly.other:
+    description: "Allow you to activate fly for other players"
+    default: op
